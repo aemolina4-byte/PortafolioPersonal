@@ -1,0 +1,201 @@
+
+/* 1. COLORES GENERALES */
+:root {
+    --oscuro: #0b1220;
+    --verde: #19b99b;
+    --claro: #f3f7fb;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 75px; }
+body { font-family: 'Segoe UI', sans-serif; color: var(--oscuro); }
+
+/* 2. NAVBAR */
+#navegacion { background: var(--oscuro); }
+.marca-punto, .texto-acento { color: var(--verde); }
+.nav-link:hover { color: var(--verde) !important; }
+
+/* 3. HERO Y FOTOGRAFÍA */
+.hero-section {
+    min-height: 100vh;
+    padding: 110px 0 60px;
+    background: radial-gradient(circle at top, #244a65, var(--oscuro));
+}
+
+.hero-contenido { max-width: 920px; }
+.hero-etiqueta { color: var(--verde); }
+.hero-perfil { font-size: 1.2rem; }
+.hero-descripcion { max-width: 700px; color: #c4d1dd; }
+
+.foto-perfil, .foto-pendiente {
+    width: 154px;
+    height: 154px;
+    border: 4px solid var(--verde);
+    object-fit: cover;
+}
+
+.foto-pendiente {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #172c46;
+    font-size: 40px;
+}
+.foto-pendiente[hidden] { display: none; }
+
+.btn-acento { background: var(--verde); color: var(--oscuro); }
+.btn-acento:hover { background: #108a76; color: white; }
+
+/* 4. SECCIONES */
+.seccion-base { scroll-margin-top: 75px; }
+.seccion-alterna { background: var(--claro); }
+.seccion-etiqueta { color: #087968; font-weight: bold; }
+.texto-seccion { color: #566579; line-height: 1.8; }
+.intro-seccion { max-width: 710px; }
+
+.perfil-dato { background: #e5f7f2; border-left: 4px solid var(--verde); }
+.dato-numero { color: #087968; font-size: 45px; }
+.dato-descripcion { color: #34485a; }
+
+/* 5. TARJETAS Y ANIMACIONES */
+.tarjeta-proyecto {
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .3s;
+}
+.tarjeta-proyecto:hover { transform: translateY(-8px); }
+
+.proyecto-media {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.proyecto-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+.tarjeta-proyecto:hover img { transform: scale(1.06); }
+
+.proyecto-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: #0b1220e6;
+    color: white;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: .3s;
+}
+
+.tarjeta-proyecto:hover .proyecto-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.overlay-etiqueta { color: var(--verde); font-weight: bold; }
+.categoria-proyecto { color: #087968; font-size: 12px; font-weight: bold; }
+
+.estado-proyecto, .etiqueta-tecnologia {
+    background: #e0f5ef;
+    color: #135a50;
+    padding: 7px;
+    border-radius: 10px;
+}
+.estado-proyecto { white-space: nowrap; }
+
+/* 6. HABILIDADES */
+.habilidad { margin-bottom: 25px; }
+.progress { height: 11px; }
+.progress-bar { background: var(--verde); }
+
+/* 7. CURRÍCULUM Y CONTACTO */
+.cv-panel, .contacto-tarjeta {
+    background: white;
+    border: 1px solid #e5edf2;
+    border-radius: 20px;
+}
+
+/* Tarjetas de contacto */
+.contacto-tarjeta {
+    display: block;
+    color: var(--oscuro);
+    text-decoration: none !important;
+    transition: .3s;
+}
+
+/* Eliminar subrayados */
+.contacto-tarjeta,
+.contacto-tarjeta * {
+    text-decoration: none !important;
+}
+
+/* Colores del contenido */
+.contacto-tarjeta h3 { color: var(--oscuro); }
+.contacto-tarjeta p { color: #566579 !important; }
+
+/* Animación de contacto */
+.contacto-tarjeta:hover {
+    color: var(--oscuro);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
+}
+
+/* Iconos de contacto */
+.contacto-icono {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background: #e0f5ef;
+    color: #087968;
+    border-radius: 15px;
+    font-size: 26px;
+}
+
+/* 8. FOOTER PERSONAL */
+.footer-personal {
+    background: var(--oscuro);
+    padding: 20px;
+    color: white;
+}
+
+.footer-red {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #243346;
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-red:hover {
+    background: var(--verde);
+    color: var(--oscuro);
+    transform: translateY(-4px);
+}
+
+.footer-copy { font-size: 12px; color: #aab9c8; }
+
+/* 9. RESPONSIVE */
+@media (hover: none) {
+    .proyecto-overlay {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Reducir animaciones */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+    .proyecto-overlay { opacity: 1; transform: none; }
+}

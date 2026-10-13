@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Alexandro Molina, estudiante de Ingeniería en Tecnologías de la Información.">
+    <title>Alexandro Molina | Portafolio</title>
+    <!-- Bootstrap y estilos propios -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- NAVBAR: menú fijo, hamburguesa en celular -->
+    <nav id="navegacion" class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#inicio">Alexandro<span class="texto-acento">.dev</span></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="menuNavegacion" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#sobre-mi">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#habilidades">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#curriculum">CV</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO: presentación centrada con Flexbox y foto circular -->
+    <header id="inicio" class="hero-section d-flex align-items-center justify-content-center text-center text-white">
+        <div class="container hero-contenido reveal-hero">
+            <p class="seccion-etiqueta mb-3">PORTAFOLIO PERSONAL</p>
+            <!-- Cambiar fotopersonal.jpg por tu fotografía; si no existe, aparece AM -->
+            <img id="fotoPerfil" src="img/fotopersonal.jpg" onerror="this.hidden=true;document.getElementById('fotoPendiente').hidden=false" alt="Foto de Alexandro Molina" class="rounded-circle foto-perfil mb-4" width="154" height="154">
+            <div id="fotoPendiente" class="foto-pendiente rounded-circle mx-auto mb-4" hidden>AM</div>
+            <h1 class="display-4 fw-bold mb-3">Hola, soy <span class="texto-acento">Alexandro Molina</span></h1>
+            <p class="hero-perfil mb-2">Estudiante de Ingeniería en Tecnologías de la Información</p>
+            <p class="hero-descripcion mx-auto mb-4">Me enfoco en desarrollar soluciones funcionales, interfaces claras y sistemas que ayuden a optimizar procesos en entornos reales.</p>
+            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                <a href="#proyectos" class="btn btn-acento btn-lg rounded-pill px-4 fw-bold">Ver proyectos</a>
+                <a href="#curriculum" class="btn btn-outline-light btn-lg rounded-pill px-4">Ver CV</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 1: SOBRE MÍ -->
+        <section id="sobre-mi" class="py-5">
+            <div class="container py-md-4">
+                <p class="seccion-etiqueta reveal-title">MI PERFIL</p>
+                <h2 class="fw-bold mb-4 reveal-title">Sobre mí</h2>
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-lg-8 reveal-left">
+                        <p class="texto-seccion">Soy Alexandro Molina, estudiante de quinto semestre de Ingeniería en Tecnologías de la Información. Me interesa el desarrollo web, la construcción de interfaces modernas y la creación de sistemas que resuelvan necesidades concretas.</p>
+                        <p class="texto-seccion mb-0">Durante mi formación he participado en proyectos académicos relacionados con bases de datos, aplicaciones web, automatización e integración de software con hardware.</p>
+                    </div>
+                    <div class="col-12 col-lg-4 reveal-right">
+                        <div class="perfil-dato p-4 rounded-3"><strong class="dato-numero d-block">5.º</strong>semestre de Ingeniería en Tecnologías de la Información</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2 PROYECTOS -->
+        <section id="proyectos" class="seccion-alterna py-5">
+            <div class="container py-md-4">
+                <p class="seccion-etiqueta text-center reveal-title">TRABAJOS DESTACADOS</p>
+                <h2 class="fw-bold text-center mb-3 reveal-title">Mis proyectos</h2>
+                <p class="texto-seccion text-center mx-auto mb-5 intro-seccion reveal-title">Proyectos de desarrollo de interfaces, automatización y gestión de información. Las imágenes son ilustraciones creadas con IA.</p>
+                <div class="row g-4">
+                <!-- PROYECTO 1 Cevichería pedidos mediante QR -->
+                <div class="col-12 col-md-4 reveal-card">
+                    <article class="card h-100 tarjeta-proyecto border-0 shadow-sm">
+                        <div class="proyecto-media">
+                            <img src="img/proyecto-cevicheria.png" alt="Imagen ilustrativa del proyecto Cevichería: pedidos mediante QR" loading="lazy">
+                            <div class="proyecto-overlay"><strong>Resumen rápido</strong><p class="mb-0">Sistema web de pedidos por QR que conecta al cliente, mesero, cocina y administración.</p></div>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="categoria-proyecto">GESTIÓN DE PEDIDOS</span>
+                            <h3 class="h5 fw-bold mt-2">Cevichería: pedidos mediante QR</h3>
+                            <p class="text-muted flex-grow-1">Proyecto orientado a digitalizar la atención de una cevichería, con varios roles y seguimiento del estado de cada pedido.</p>
+                            <div class="d-flex flex-wrap gap-2"><span class="badge etiqueta-tecnologia">QR</span><span class="badge etiqueta-tecnologia">Roles</span><span class="badge etiqueta-tecnologia">Pedidos</span><span class="badge etiqueta-tecnologia">Seguimiento</span></div>
+                        </div>
+                    </article>
+                </div>
+                <!-- PROYECTO 2 Proyecto web con React -->
+                <div class="col-12 col-md-4 reveal-card">
+                    <article class="card h-100 tarjeta-proyecto border-0 shadow-sm">
+                        <div class="proyecto-media">
+                            <img src="img/proyecto-react.png" alt="Imagen ilustrativa del proyecto Proyecto web con React" loading="lazy">
+                            <div class="proyecto-overlay"><strong>Resumen rápido</strong><p class="mb-0">Interfaz desarrollada con React, componentes reutilizables y diseño moderno.</p></div>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="categoria-proyecto">DESARROLLO FRONTEND</span>
+                            <h3 class="h5 fw-bold mt-2">Proyecto web con React</h3>
+                            <p class="text-muted flex-grow-1">Aplicación web construida con React, orientada a organizar componentes y ofrecer una interfaz dinámica.</p>
+                            <div class="d-flex flex-wrap gap-2"><span class="badge etiqueta-tecnologia">React</span><span class="badge etiqueta-tecnologia">JavaScript</span><span class="badge etiqueta-tecnologia">Componentes</span><span class="badge etiqueta-tecnologia">UI</span></div>
+                        </div>
+                    </article>
+                </div>
+                <!-- PROYECTO 3 Sistema de invernadero -->
+                <div class="col-12 col-md-4 reveal-card">
+                    <article class="card h-100 tarjeta-proyecto border-0 shadow-sm">
+                        <div class="proyecto-media">
+                            <img src="img/proyecto-invernadero.png" alt="Imagen ilustrativa del proyecto Sistema de invernadero" loading="lazy">
+                            <div class="proyecto-overlay"><strong>Resumen rápido</strong><p class="mb-0">Inventario de plantas con operaciones CRUD, base de datos MySQL e integración con Arduino.</p></div>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="categoria-proyecto">GESTIÓN Y AUTOMATIZACIÓN</span>
+                            <h3 class="h5 fw-bold mt-2">Sistema de invernadero</h3>
+                            <p class="text-muted flex-grow-1">Aplicación para registrar y administrar plantas, almacenar información en MySQL y comunicarse con Arduino.</p>
+                            <div class="d-flex flex-wrap gap-2"><span class="badge etiqueta-tecnologia">Java</span><span class="badge etiqueta-tecnologia">MySQL</span><span class="badge etiqueta-tecnologia">Arduino</span><span class="badge etiqueta-tecnologia">CRUD</span></div>
+                        </div>
+                    </article>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3 HABILIDADES -->
+        <section id="habilidades" class="py-5">
+            <div class="container py-md-4">
+                <p class="seccion-etiqueta reveal-title">MIS HABILIDADES</p>
+                <h2 class="fw-bold mb-3 reveal-title">Habilidades técnicas</h2>
+                <p class="texto-seccion mb-5 reveal-title">Porcentajes orientativos según mi experiencia académica y práctica.</p>
+                <div class="row g-4">
+                <div class="col-12 col-lg-6 reveal-left">
+                    <div class="habilidad">
+                        <div class="d-flex justify-content-between mb-2"><span>HTML</span><span>70%</span></div>
+                        <div class="progress"><div class="progress-bar" role="progressbar" style="width:70%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="HTML"></div></div>
+                    </div>
+                    <div class="habilidad">
+                        <div class="d-flex justify-content-between mb-2"><span>CSS</span><span>80%</span></div>
+                        <div class="progress"><div class="progress-bar" role="progressbar" style="width:80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="CSS"></div></div>
+                    </div>
+                    <div class="habilidad">
+                        <div class="d-flex justify-content-between mb-2"><span>JavaScript</span><span>65%</span></div>
+                        <div class="progress"><div class="progress-bar" role="progressbar" style="width:65%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript"></div></div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 reveal-right">
+                    <div class="habilidad">
+                        <div class="d-flex justify-content-between mb-2"><span>React</span><span>60%</span></div>
+                        <div class="progress"><div class="progress-bar" role="progressbar" style="width:60%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="React"></div></div>
+                    </div>
+                    <div class="habilidad">
+                        <div class="d-flex justify-content-between mb-2"><span>MySQL</span><span>80%</span></div>
+                        <div class="progress"><div class="progress-bar" role="progressbar" style="width:80%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="MySQL"></div></div>
+                    </div>
+                    <div class="habilidad">
+                        <div class="d-flex justify-content-between mb-2"><span>JSON / AJAX</span><span>65%</span></div>
+                        <div class="progress"><div class="progress-bar" role="progressbar" style="width:65%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" aria-label="JSON / AJAX"></div></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4 CURRÍCULUM -->
+        <section id="curriculum" class="seccion-alterna py-5">
+            <div class="container py-md-4">
+                <div class="cv-panel row g-4 align-items-center p-4 p-md-5 mx-0 reveal-card">
+                    <div class="col-12 col-lg-8">
+                        <p class="seccion-etiqueta">MI TRAYECTORIA</p>
+                        <h2 class="fw-bold mb-3">Currículum profesional</h2>
+                        <p class="texto-seccion mb-0">Conoce mi formación, los proyectos en los que he participado y las tecnologías con las que trabajo.</p>
+                    </div>
+                    <div class="col-12 col-lg-4 text-lg-end">
+                        <a class="btn btn-acento btn-lg rounded-pill px-4" href="cv/CV_Alexandro_Molina.pdf" download>Descargar CV</a>
+                        <p class="small text-muted mt-2 mb-0">Descarga mi hoja de vida en PDF</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5 CONTACTO PROFESIONAL; cambiar LinkedIn y GitHub por URLs de perfil -->
+        <section id="contacto" class="py-5">
+            <div class="container py-md-4">
+                <p class="seccion-etiqueta text-center reveal-title">CONTACTO</p>
+                <h2 class="fw-bold text-center mb-3 reveal-title">Canales profesionales</h2>
+                <p class="texto-seccion text-center mx-auto mb-5 reveal-title">Puedes contactarme por correo o conocer mis proyectos en mis redes profesionales.</p>
+                <div class="row g-4">
+                    <div class="col-12 col-md-4 reveal-card"><a class="contacto-tarjeta d-block text-center p-4 h-100" href="mailto:aemolina4@espe.edu.ec"><div class="contacto-icono mx-auto mb-3">@</div><h3 class="h5 fw-bold">Correo</h3><p class="text-muted mb-0">aemolina4@espe.edu.ec</p></a></div>
+                    <div class="col-12 col-md-4 reveal-card"><a class="contacto-tarjeta d-block text-center p-4 h-100" href="https://www.linkedin.com/in/TU_USUARIO/" target="_blank" rel="noopener noreferrer"><div class="contacto-icono mx-auto mb-3">in</div><h3 class="h5 fw-bold">LinkedIn</h3><p class="text-muted mb-0">Mi perfil profesional</p></a></div>
+                    <div class="col-12 col-md-4 reveal-card"><a class="contacto-tarjeta d-block text-center p-4 h-100" href="https://github.com/TU_USUARIO" target="_blank" rel="noopener noreferrer"><div class="contacto-icono mx-auto mb-3">&lt;/&gt;</div><h3 class="h5 fw-bold">GitHub</h3><p class="text-muted mb-0">Mis repositorios</p></a></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER-->
+    <footer class="footer-personal text-center">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center gap-3 mb-2">
+                <a class="footer-red" href="https://www.facebook.com/alex.536189?locale=es_LA" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a class="footer-red" href="https://www.instagram.com/alex.zzz03/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a class="footer-red" href="https://x.com/TU_USUARIO" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            </div>
+            <p class="footer-copy mb-0">&copy; <span id="anioActual">2026</span> Alexandro Molina · Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS: primero Bootstrap, luego ScrollReveal y nuestro JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
